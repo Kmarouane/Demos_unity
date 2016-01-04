@@ -1,10 +1,10 @@
-===================================================
+===========================================================================================
 
-									D	E	M	O	1
+																			D	E	M	O	1
 									
-								Série de dominos
+																		Série de dominos
 	
-===================================================
+===========================================================================================
 	
 Le but est de faire tomber tous les dominos en affectant à chacun une couleur définie. 
 L'ordre d'affectation est "Rouge, Vert, Bleu, Rouge, Vert, Bleu.....etc". 
