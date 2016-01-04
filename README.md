@@ -1,0 +1,2 @@
+Première démo unity
+Le but est de faire tomber tous les dominos en affectant à chacun une couleur définie. L'ordre d'affectation est "Rouge, Vert, Bleu, Rouge, Vert...etc". Après chaque affectation, on peut passer à l'itération suivant en effectuant un "Drag & Drop" du cube "N" dans l'armoire de droite.
