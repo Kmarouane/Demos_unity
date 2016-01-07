@@ -5,7 +5,7 @@ using System.Collections;
 public class AffichageIteration : MonoBehaviour {
 
 	Text text;
-	public Iterations its;
+	//public Iterations its;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +14,6 @@ public class AffichageIteration : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Itération : " + its.getIteration ();
+		text.text = "Itération : " + Iterations._iteration;
 	}
 }

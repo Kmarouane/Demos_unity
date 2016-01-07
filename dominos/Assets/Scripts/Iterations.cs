@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Iterations : MonoBehaviour {
 
-	int _iteration = 1;
+	public static int _iteration = 1;
 	GameObject suivant;
 	Vector3 s_position;
 	GameObject precedent;
@@ -11,9 +11,6 @@ public class Iterations : MonoBehaviour {
 
 	// Use this for initialization
 
-	public int getIteration(){
-		return _iteration;
-	}
 	void Start () {
 		suivant = GameObject.Find ("SuivantCube");
 		precedent = GameObject.Find ("PrecedentCube");
