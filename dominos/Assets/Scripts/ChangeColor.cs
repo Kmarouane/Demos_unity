@@ -14,6 +14,7 @@ public class ChangeColor : MonoBehaviour {
 	void Start () {
 		dominoCourant = GameObject.Find ("Domino" + Iterations._iteration);//its.getIteration());
 		dominos [0] = GameObject.Find ("Domino0");
+		dominos [0].GetComponent<Rigidbody> ().isKinematic = true;
 		for (int i = 1; i <= 5; i++) {
 			dominos [i] = GameObject.Find ("Domino" + i);
 			dominos [i].GetComponent<Rigidbody> ().isKinematic = true;
@@ -21,8 +22,9 @@ public class ChangeColor : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
-		dominoCourant.GetComponent<Renderer> ().material.color = col.gameObject.GetComponent<Renderer> ().material.color;
-		currentColor = dominoCourant.GetComponent<Renderer> ().material.color;
+		currentColor = col.gameObject.GetComponent<Renderer> ().material.color;
+		if(currentColor==Color.red||currentColor==Color.green||currentColor==Color.blue)
+			dominoCourant.GetComponent<Renderer> ().material.color = currentColor;
 	}
 
 	// Update is called once per frame
@@ -31,7 +33,7 @@ public class ChangeColor : MonoBehaviour {
 		if (dominoCourant.name == "Domino0" && currentColor == Color.red) {
 			dominoCourant.gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, -10);
 		}
-		for (int i = 1; i <= 5; i++) {
+		for (int i = 0; i <= 5; i++) {
 			if (dominoCourant == dominos [i] && currentColor == colors [i]) {
 				dominos[i].GetComponent<Rigidbody> ().isKinematic = false;
 			}

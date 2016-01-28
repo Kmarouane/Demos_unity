@@ -48,8 +48,9 @@
      <Compile Include="Assets\Scripts\APorter.cs" />
      <Compile Include="Assets\Scripts\AffichageIteration.cs" />
      <Compile Include="Assets\Scripts\ChangeColor.cs" />
-     <Compile Include="Assets\Scripts\DominoSimulation.cs" />
      <Compile Include="Assets\Scripts\Iterations.cs" />
+     <Compile Include="Assets\Scripts\Level2Transition.cs" />
+     <Compile Include="Assets\Scripts\OpenDoor.cs" />
      <Compile Include="Assets\Scripts\PorterJeton.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

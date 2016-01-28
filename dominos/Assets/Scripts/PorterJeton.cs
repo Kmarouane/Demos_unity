@@ -31,16 +31,17 @@ public class PorterJeton : MonoBehaviour {
 	}
 
 	void Ramasser(){		
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space) || Input.GetMouseButtonDown(0)) {
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
 
 			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
 			RaycastHit hit;
 			if (Physics.Raycast (ray, out hit)) {
-				Cursor.SetCursor (curseur, Vector2.zero, CursorMode.Auto);//*****************************************
+				
 				APorter p = hit.collider.GetComponent<APorter> ();
 				if (p != null) {
+					Cursor.SetCursor (curseur, Vector2.zero, CursorMode.Auto);//*****************************************
 					porteUnObjet = true;
 					objetAPorter = p.gameObject;
 				}
@@ -49,7 +50,7 @@ public class PorterJeton : MonoBehaviour {
 	}
 
 	void TestRelachement (){
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space)  || Input.GetMouseButtonDown(0)) {
 			Relacher ();
 		}
 	}
