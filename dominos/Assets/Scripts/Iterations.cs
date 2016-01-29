@@ -26,7 +26,6 @@ public class Iterations : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.V) && _iteration>1) {
 			_iteration--;
 		}
-		Debug.Log ("Iteration : " + _iteration);
 	}
 
 	void OnTriggerEnter(Collider col) { // use invoke
