@@ -2,7 +2,7 @@
 
 
 
-##Niveau 1	
+###Niveau 1	
 Le but est de faire tomber tous les dominos en affectant à chacun une couleur définie. 
 L'ordre d'affectation est "Rouge, Vert, Bleu, Rouge, Vert, Bleu.....etc". 
 La scène se composent de deux armoires celle de droite est destinée a recevoir le cube de la couleur et celle de gauche est destinée a recevoir le cube de l'itération (N pour suivant et P pour précédent).
@@ -16,7 +16,7 @@ Solution:
 * recommencer l'étape 1 mais avec la couleur verte cette fois-ci.
 * réitérez le procédé en suivant cet ordre : rouge-vert-bleu-rouge-vert-bleu.
 	
-##Niveau 2 
+###Niveau 2 
 Dans ce niveau le joueur devra construire l'algorithme adéquat afin de faire tomber la série de dominos qu'il devra initialiser au préalable, pour ce faire:
 * Initialisation en plaçant les bons cubes dans les bons tiroires de l'armoire rouge (celle de gauche)
 * Construction de l'algorithme en plaçant les bons cubes dans les bons tiroires de l'armoire verte (celle de droite)
