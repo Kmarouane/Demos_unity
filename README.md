@@ -15,6 +15,7 @@ Solution:
 * glissez-déposez le cube N dans l'armoire de droite pour passer à l'itération suivant.
 * recommencer l'étape 1 mais avec la couleur verte cette fois-ci.
 * réitérez le procédé en suivant cet ordre : rouge-vert-bleu-rouge-vert-bleu.
+
 A la fin de ce niveau la porte de droite s'ouvre et vous pouvez passer au niveau suivant.
 	
 ###Niveau 2 
