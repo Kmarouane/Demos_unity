@@ -22,4 +22,5 @@ A la fin de ce niveau la porte de droite s'ouvre et vous pouvez passer au niveau
 Dans ce niveau le joueur devra construire l'algorithme adéquat afin de faire tomber la série de dominos qu'il devra initialiser au préalable, pour ce faire:
 * Initialisation en plaçant les bons cubes dans les bons tiroires de l'armoire rouge (celle de gauche)
 * Construction de l'algorithme en plaçant les bons cubes dans les bons tiroires de l'armoire verte (celle de droite)
+
 En bas de chaque armoire se trouve un bouton "play" qui permet de lancer l'algorithme.
