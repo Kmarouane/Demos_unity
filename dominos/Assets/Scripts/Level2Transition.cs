@@ -20,14 +20,16 @@ public class Level2Transition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if (Mathf.Ceil(joueur.transform.position.x) >= Mathf.Ceil(porte.transform.position.x)) {
 			LevelManager._level = 2;
 		}
+
 	}
 
 	void OnCollisionEnter(Collision col){
 		if (col.gameObject.name == "Domino5") {
-			openLevel2Door.GoToLvl2 ();
+			openLevel2Door.GoToLvl2 (135f);
 			Invoke ("FinNiveau", 0f);
 			Invoke ("FinNiveau", 3f);
 		}

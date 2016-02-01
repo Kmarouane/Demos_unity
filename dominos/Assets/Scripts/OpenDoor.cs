@@ -13,11 +13,11 @@ public class OpenDoor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.M)) {
-			GoToLvl2 ();
+			GoToLvl2 (angle);
 		}
 	}
 
-	public void GoToLvl2(){
+	public void GoToLvl2(float a){
 		transform.Rotate (Vector3.up, angle , Space.Self);
 	}
 }
