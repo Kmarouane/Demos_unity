@@ -1,30 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TailleMoinsUnScript : MonoBehaviour {
+public class TailleT1 : MonoBehaviour {
 
-	public static int tailleMoinsUn;
 	public static bool valide = false;
+	//public GameObject[] jetons;
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 
 	void OnTriggerEnter(Collider col){
 		if (col.name.Contains ("Nombre")) {
-			int tmp = int.Parse (col.name.Substring (6));
-			if (TailleTableau.tailleDuTableau - tmp == 1) {
-				tailleMoinsUn = tmp;
+			int taille = int.Parse (col.name.Substring (6,1));
+			Debug.Log (taille);
+			if (taille == TailleTableau.tailleDuTableau) {
 				valide = true;
-				Instantiate (col.gameObject, new Vector3 (17.18f, 2.5f, -8.2f), Quaternion.identity);
-				Destroy(col.gameObject.GetComponent<APorter>());
+				Instantiate (col.gameObject, new Vector3(16.7f,2.5f,-8.5f), Quaternion.identity);
+				Destroy (col.gameObject.GetComponent<APorter> ());
 				Destroy (col.gameObject.GetComponent<Rigidbody> ());
 				Destroy (gameObject);
 			} else
 				valide = false;
 		}
-		Debug.Log ("n-1 : " + valide);
+		else
+			valide = false;
+
+		Debug.Log (col.name + " : " + valide);
 	}
 
 	// Update is called once per frame

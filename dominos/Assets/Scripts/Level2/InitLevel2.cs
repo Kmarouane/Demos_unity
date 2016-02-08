@@ -11,7 +11,7 @@ public class InitLevel2 : MonoBehaviour {
 	bool kinematic_state;
 	Color[] colors = new Color[3];
 
-	GameObject[] dominos;
+	public GameObject[] dominos;
 	public Vector3[] positions;
 
 	public GameObject domino;

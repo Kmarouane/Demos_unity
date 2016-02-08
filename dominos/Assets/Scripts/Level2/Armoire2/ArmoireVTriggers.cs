@@ -12,9 +12,10 @@ public class ArmoireVTriggers : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		if (col.name == jeton.name) {
+		if (col.name.Contains(jeton.name)) {
 			valide = true;
-			Instantiate (col.gameObject, jeton.transform.position/*new Vector3 (21.83f, 2.133f, -7.07f)*/, Quaternion.identity);
+			SimulLevel2.verificateurs++;
+			Instantiate (col.gameObject, jeton.transform.position, Quaternion.identity);
 			Destroy(col.gameObject.GetComponent<APorter>());
 			Destroy (col.gameObject.GetComponent<Rigidbody> ());
 			Destroy (gameObject);

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TailleMoinsUnScript : MonoBehaviour {
+public class TailleMoinsUnT1 : MonoBehaviour {
 
-	public static int tailleMoinsUn;
 	public static bool valide = false;
 
 	// Use this for initialization
@@ -13,9 +12,8 @@ public class TailleMoinsUnScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.name.Contains ("Nombre")) {
-			int tmp = int.Parse (col.name.Substring (6));
+			int tmp = int.Parse (col.name.Substring (6,1));
 			if (TailleTableau.tailleDuTableau - tmp == 1) {
-				tailleMoinsUn = tmp;
 				valide = true;
 				Instantiate (col.gameObject, new Vector3 (17.18f, 2.5f, -8.2f), Quaternion.identity);
 				Destroy(col.gameObject.GetComponent<APorter>());

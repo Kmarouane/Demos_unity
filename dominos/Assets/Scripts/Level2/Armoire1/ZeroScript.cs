@@ -20,6 +20,7 @@ public class ZeroScript : MonoBehaviour {
 		}
 		else
 			vide = false;
+		
 		Debug.Log ("0 : " + vide);
 	}
 	

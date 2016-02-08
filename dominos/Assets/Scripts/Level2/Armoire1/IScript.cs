@@ -20,6 +20,7 @@ public class IScript : MonoBehaviour {
 		}
 		else
 			valide = false;
+		
 		Debug.Log ("I : " + valide);
 	}
 

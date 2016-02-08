@@ -12,7 +12,7 @@ public class ArmoireVT2 : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		if (InitLevel2.niveauInitialise == 0) {
+		if (InitLevel2.niveauInitialise == 1) {
 			if (col.name == "JetonFOR") {
 				Instantiate (tiroirPour,tiroirPour.transform.position,Quaternion.identity);
 				//Instantiate (jeton, new Vector3 (20.568f, 2.133f, -6.975f), Quaternion.identity);

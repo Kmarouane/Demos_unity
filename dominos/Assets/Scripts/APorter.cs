@@ -11,7 +11,5 @@ public class APorter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//transform.rotation = Camera.main.transform.rotation;
-		//transform.rotation=Quaternion.LookRotation(Camera.main.transform.forward);
 	}
 }
