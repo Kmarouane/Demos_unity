@@ -21,6 +21,10 @@ public class BoolScript : MonoBehaviour {
 			valide = true;
 			string tmp = col.name.ToLower ().Substring (5, taille);
 			value = bool.Parse (tmp);
+			Instantiate (col.gameObject, new Vector3 (24.88f, 2.133f, -6.8f), Quaternion.identity);
+			Destroy(col.gameObject.GetComponent<APorter>());
+			Destroy (col.gameObject.GetComponent<Rigidbody> ());
+			Destroy (gameObject);
 		} else
 			valide = false;
 		Debug.Log (valide);

@@ -14,7 +14,13 @@ public class InitLevel2 : MonoBehaviour {
 	GameObject[] dominos;
 	public Vector3[] positions;
 
-	public Rigidbody domino;
+	public GameObject domino;
+	public GameObject arrow;
+	public GameObject ouvrirArmoire2;
+	public GameObject armoire2Text1;
+	public GameObject armoire2Text2;
+
+	public static int niveauInitialise = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -68,6 +74,12 @@ public class InitLevel2 : MonoBehaviour {
 		}
 		ChangeKinematicState ();
 		PaintDominos ();
+		InvertDominos ();
+		ShowArrows ();
+		niveauInitialise = 1;
+		ouvrirArmoire2.transform.Rotate (Vector3.up,-120,Space.Self);
+		armoire2Text1.gameObject.GetComponent<Renderer> ().enabled = true;
+		armoire2Text2.gameObject.GetComponent<Renderer> ().enabled = true;
 	}
 
 	void ChangeKinematicState(){
@@ -79,6 +91,21 @@ public class InitLevel2 : MonoBehaviour {
 	void PaintDominos(){
 		for (int i = 0; i < taille; i++) {
 			dominos [i].gameObject.GetComponent<Renderer> ().material.color = colors [i % 3];
+		}
+	}
+
+	void InvertDominos(){
+		for (int i = 0; i < taille; i++) {
+			if (i % 2 == 1)
+				dominos [i].transform.Rotate (Vector3.up * 90f);
+			else
+				dominos [i].transform.Rotate (-Vector3.up * 90f);
+		}
+	}
+
+	void ShowArrows(){
+		for (i = 0; i < taille; i++) {
+			Instantiate (arrow, dominos[i].transform.position, dominos[i].transform.rotation);
 		}
 	}
 	// Update is called once per frame

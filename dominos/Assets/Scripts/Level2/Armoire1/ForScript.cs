@@ -11,8 +11,13 @@ public class ForScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		if (col.name == "JetonFOR")
+		if (col.name == "JetonFOR") {
 			valide = true;
+			Instantiate (col.gameObject, new Vector3 (21f, 2f, -7f), Quaternion.identity);
+			Destroy(col.gameObject.GetComponent<APorter>());
+			Destroy (col.gameObject.GetComponent<Rigidbody> ());
+			Destroy (gameObject);
+		}
 		else
 			valide = false;
 		

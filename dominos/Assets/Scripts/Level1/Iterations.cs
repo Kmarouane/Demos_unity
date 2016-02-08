@@ -30,12 +30,18 @@ public class Iterations : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) { // use invoke
 		if (col.gameObject == suivant && _iteration<6) {
+			StartCoroutine(Attendre());
 			_iteration++;
 		}
 		if (col.gameObject == precedent && _iteration>1) {
+			StartCoroutine(Attendre());
 			_iteration--;
 		}
 		suivant.transform.position = s_position;
 		precedent.transform.position = p_position;
+	}
+
+	IEnumerator Attendre() {
+		yield return new WaitForSeconds(5);
 	}
 }
