@@ -58,11 +58,10 @@
      <Compile Include="Assets\Scripts\Level2\Armoire1\TailleMoinsUnScript.cs" />
      <Compile Include="Assets\Scripts\Level2\Armoire1\TailleTableau.cs" />
      <Compile Include="Assets\Scripts\Level2\Armoire1\ZeroScript.cs" />
-     <Compile Include="Assets\Scripts\Level2\Armoire2\ArmoireVT1.cs" />
-     <Compile Include="Assets\Scripts\Level2\Armoire2\ArmoireVT2.cs" />
      <Compile Include="Assets\Scripts\Level2\Armoire2\ArmoireVTriggers.cs" />
      <Compile Include="Assets\Scripts\Level2\Armoire2\TailleMoinsUnT1.cs" />
      <Compile Include="Assets\Scripts\Level2\Armoire2\TailleT1.cs" />
+     <Compile Include="Assets\Scripts\Level2\Armoire2\TiroirApparition.cs" />
      <Compile Include="Assets\Scripts\Level2\Assenceur.cs" />
      <Compile Include="Assets\Scripts\Level2\FaceTheCamera.cs" />
      <Compile Include="Assets\Scripts\Level2\InitLevel2.cs" />

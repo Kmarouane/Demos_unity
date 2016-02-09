@@ -76,7 +76,7 @@ public class InitLevel2 : MonoBehaviour {
 		PaintDominos ();
 		InvertDominos ();
 		ShowArrows ();
-		niveauInitialise = 1;
+		niveauInitialise += 1;
 		ouvrirArmoire2.transform.Rotate (Vector3.up,-120,Space.Self);
 		armoire2Text1.gameObject.GetComponent<Renderer> ().enabled = true;
 		armoire2Text2.gameObject.GetComponent<Renderer> ().enabled = true;

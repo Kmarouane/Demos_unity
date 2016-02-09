@@ -25,11 +25,18 @@ public class SimulLevel2 : MonoBehaviour {
 				else
 					scriptInit.dominos [i].transform.Rotate (Vector3.up * 90f);
 			}
+			for (int i = 0; i < TailleTableau.tailleDuTableau; i++) {
+				scriptInit.dominos [i].GetComponent<Rigidbody> ().isKinematic = false;
+				if (i == 0)
+					scriptInit.dominos [i].GetComponent<Rigidbody> ().AddForce (0, 0, -10);
+					
+			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
+		Debug.Log ("Peut appuyer? : " + can_click + " why " + verificateurs);
 		if (!can_click &&
 		    TailleT1.valide && TailleMoinsUnT1.valide && verificateurs == 14 && InitLevel2.niveauInitialise == 1)
 			can_click = true;
