@@ -13,10 +13,12 @@ public class TailleTableau : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if (col.name.Contains ("Nombre")) {
 			tailleDuTableau = int.Parse (col.name.Substring (6));
-			Instantiate (col.gameObject, new Vector3 (17f, 2.5f, -8f), Quaternion.identity);
-			Destroy(col.gameObject.GetComponent<APorter>());
-			Destroy (col.gameObject.GetComponent<Rigidbody> ());
-			Destroy (gameObject);
+			if (tailleDuTableau > 2) {
+				Instantiate (col.gameObject, new Vector3 (17f, 2.5f, -8f), Quaternion.identity);
+				Destroy(col.gameObject.GetComponent<APorter>());
+				Destroy (col.gameObject.GetComponent<Rigidbody> ());
+				Destroy (gameObject);
+			}
 		} else
 			tailleDuTableau = -1;
 		Debug.Log ("n : " + tailleDuTableau);

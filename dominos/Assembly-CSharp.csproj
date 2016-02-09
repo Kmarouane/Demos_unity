@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Level2\Armoire2\TiroirApparition.cs" />
      <Compile Include="Assets\Scripts\Level2\Assenceur.cs" />
      <Compile Include="Assets\Scripts\Level2\FaceTheCamera.cs" />
+     <Compile Include="Assets\Scripts\Level2\FinNiveau2.cs" />
      <Compile Include="Assets\Scripts\Level2\InitLevel2.cs" />
      <Compile Include="Assets\Scripts\Level2\SimulLevel2.cs" />
      <Compile Include="Assets\Scripts\Level2Transition.cs" />

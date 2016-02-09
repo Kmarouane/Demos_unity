@@ -7,11 +7,12 @@ public class InitLevel2 : MonoBehaviour {
 	int can_instantiate = 0;
 	public Material red_color;
 	bool can_click = false;
-	int taille;
+	public int taille;   //s'il y a une erreur enleve public
 	bool kinematic_state;
 	Color[] colors = new Color[3];
 
 	public GameObject[] dominos;
+	GameObject[] fleches;
 	public Vector3[] positions;
 
 	public GameObject domino;
@@ -34,6 +35,7 @@ public class InitLevel2 : MonoBehaviour {
 
 			dominos = new GameObject[taille];
 			positions = new Vector3[taille];
+			fleches = new GameObject[taille];
 
 			can_instantiate = 1;
 		}
@@ -105,7 +107,7 @@ public class InitLevel2 : MonoBehaviour {
 
 	void ShowArrows(){
 		for (i = 0; i < taille; i++) {
-			Instantiate (arrow, dominos[i].transform.position, dominos[i].transform.rotation);
+			fleches [i] = Instantiate (arrow, dominos [i].transform.position, dominos [i].transform.rotation) as GameObject;
 		}
 	}
 	// Update is called once per frame
@@ -126,9 +128,13 @@ public class InitLevel2 : MonoBehaviour {
 
 		}
 
-		if (can_instantiate == 1) {
+		if (can_instantiate == 1 && niveauInitialise == 0) {
 			InstantiateDomino ();
 			can_instantiate = 0;
 		}
+
+		if (niveauInitialise == 1)
+			for (int i = 0; i < taille; i++)
+				fleches [i].transform.rotation = dominos [i].transform.rotation;
 	}
 }

@@ -10,6 +10,7 @@ public class FaceTheCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.LookAt (transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+		if (Camera.main.tag == "MainCamera")
+			transform.LookAt (transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
 	}
 }
