@@ -18,7 +18,11 @@ Solution:
 
 A la fin de ce niveau la porte de droite s'ouvre et vous pouvez passer au niveau suivant.
 	
-###Niveau 2 
+###Niveau 2 (un nouveau niveau est en cours de développement)
+Soon
+
+ 	
+###Niveau 3 = ancien niveau 2
 Dans ce niveau le joueur devra construire l'algorithme adéquat afin de faire tomber la série de dominos qu'il devra initialiser au préalable, pour ce faire:
 * Initialisation en plaçant les bons cubes dans les bons tiroires de l'armoire rouge (celle de gauche)
 * Construction de l'algorithme en plaçant les bons cubes dans les bons tiroires de l'armoire verte (celle de droite)
