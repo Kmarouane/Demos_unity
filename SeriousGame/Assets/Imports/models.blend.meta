@@ -10,23 +10,43 @@ ModelImporter:
     100004: //RootNode
     100006: Cube
     100008: Cube_001
+    100010: Cube_002
+    100012: Cube_003
+    100014: Ball
+    100016: Sphere
     400000: Circle
     400002: Cylinder
     400004: //RootNode
     400006: Cube
     400008: Cube_001
+    400010: Cube_002
+    400012: Cube_003
+    400014: Ball
+    400016: Sphere
     2300000: Circle
     2300002: Cylinder
     2300004: Cube
     2300006: Cube_001
+    2300008: Cube_002
+    2300010: Cube_003
+    2300012: Ball
+    2300014: Sphere
     3300000: Circle
     3300002: Cylinder
     3300004: Cube
     3300006: Cube_001
+    3300008: Cube_002
+    3300010: Cube_003
+    3300012: Ball
+    3300014: Sphere
     4300000: Circle
     4300002: Cylinder
     4300004: Cube_001
     4300006: Cube
+    4300008: Cube_002
+    4300010: Cube_003
+    4300012: Ball
+    4300014: Sphere
     7400000: Default Take
     9500000: //RootNode
   materials:
