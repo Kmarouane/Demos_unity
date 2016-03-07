@@ -19,7 +19,9 @@ Solution:
 A la fin de ce niveau la porte de droite s'ouvre et vous pouvez passer au niveau suivant.
 	
 ###Niveau 2 (un nouveau niveau est en cours de développement)
-Soon
+Le but de ce niveau est d'expliquer la notion de la boucle "for". Le joueur devra construire lui même le niveau en faisant apparître les objets voulus ( semi sandbox).
+Pour le moment il faudra faire tomber tous les dominos à condition que l'algorithme affichée sur le télévisur soit respecté.
+La particularité de ce niveau est l'utilisation d'effets de particules et de textures animées.
 
  	
 ###Niveau 3 = ancien niveau 2
