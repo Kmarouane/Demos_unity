@@ -25,4 +25,5 @@ public class FireBall : MonoBehaviour {
 		GameObject bouleDeFeu = Instantiate (cannonBall, transform.position + new Vector3 (0f, 1.5f, 1.045f), Quaternion.identity) as GameObject;
 		bouleDeFeu.GetComponent<Rigidbody> ().velocity = transform.TransformDirection (new Vector3 (0, 0, vitesse));
 	}
+
 }

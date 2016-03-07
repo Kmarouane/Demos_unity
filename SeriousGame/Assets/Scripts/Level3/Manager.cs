@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Manager : MonoBehaviour {
 
-	GameObject[] dominosTableau;
+	public static GameObject[] dominosTableau;
 	public GameObject canonACouleurs;
 	public GameObject nuageAFoudre;
 	GameObject objetDomino;
-	GameObject canon;
-	GameObject nuage;
+	public static GameObject canon;
+	public static GameObject nuage;
 	public GameObject objetDominoGris;
 	public GameObject objetDominoNoir;
 	public Transform rotationTarget;
@@ -20,6 +20,7 @@ public class Manager : MonoBehaviour {
 	Vector3 spawnPosition;
 
 	public GameObject armoireVide;
+	public GameObject startButton;
 	GameObject lightGlobal;
 
 	// Use this for initialization
@@ -45,7 +46,7 @@ public class Manager : MonoBehaviour {
 				cloudParticles.startLifetime = cloudParticles.startLifetime;
 				cloudParticles.transform.Translate (Vector3.left);
 				Ingurgiteur.canInstantiateDomino = false;
-				if (currentDomino == 1)
+				if (currentDomino == 4)
 					checksum++;
 			}
 		} else if (Ingurgiteur.index == 6) {
@@ -76,10 +77,10 @@ public class Manager : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.Y)) {	
-			if (!canCanon) 
-				canon.transform.Translate (Vector3.left);
+			if (!canCanon)
+				TranslateCannon ();
 			if (!canNuage)
-				nuage.transform.Translate (Vector3.left);
+				TranslateNuage ();
 			thunderParticles.transform.Translate (Vector3.left);
 			dropParticles.transform.Translate (Vector3.left);
 			GameObject.Find ("FireBallParticleSystem").GetComponent<ParticleSystem> ().transform.Translate (Vector3.left);
@@ -102,7 +103,16 @@ public class Manager : MonoBehaviour {
 		}
 	}
 
-	void Thunder(){
+	public static void TranslateCannon(){
+		canon.transform.Translate (Vector3.left);
+	}
+
+	public static void TranslateNuage(){
+		nuage.transform.Translate (Vector3.left);
+	}
+
+
+	public void Thunder(){
 		lightGlobal.GetComponent<Light> ().intensity = 0.0f;
 		thunderParticles.GetComponent<Light> ().enabled = true;
 		thunderParticles.Play ();
@@ -112,7 +122,7 @@ public class Manager : MonoBehaviour {
 		Invoke ("ResetIntensity", 0.30f);
 	}
 
-	void Rain(){
+	public void Rain(){
 		dropParticles.Play ();
 		dropParticles.startLifetime = dropParticles.startLifetime;
 	}
@@ -124,15 +134,16 @@ public class Manager : MonoBehaviour {
 
 	void InstantiateWardrobe(){
 		ActivateStars ();
-		//Instantiate (armoireVide, spawnPosition + new Vector3 (0, 4.0f, 0), Quaternion.identity);
+		Instantiate (armoireVide, spawnPosition + new Vector3 (0, 4.0f, 0), Quaternion.identity);
 		armoireVide.gameObject.GetComponent<Rigidbody>().isKinematic=false;
 		Invoke ("DestroySpawner", 1.0f);
 		GameObject.Find ("LevelPrimeArrow").GetComponent<Animator> ().Play ("FlecheVersLeBas2ndEtape", -1, 0f);
-		//Destroy (GameObject.Find ("LevelPrimeArrow"));
+
 	}
 
 	void DestroySpawner(){
 		Destroy (GameObject.Find ("Spawner"));
+		Instantiate (startButton, new Vector3 (49.671f, 0.363f, 9.46f), Quaternion.identity);
 	}
 
 	void ActivateStars(){

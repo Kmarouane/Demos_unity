@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\Level3\Ingurgiteur.cs" />
      <Compile Include="Assets\Scripts\Level3\IngurgiteurCondition.cs" />
      <Compile Include="Assets\Scripts\Level3\Manager.cs" />
+     <Compile Include="Assets\Scripts\Level3\RaycastExample.cs" />
      <Compile Include="Assets\Scripts\Level3\SimuleLevelPrime.cs" />
      <Compile Include="Assets\Scripts\Level3\Trigger.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
