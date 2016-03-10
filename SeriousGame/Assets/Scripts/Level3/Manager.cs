@@ -20,7 +20,7 @@ public class Manager : MonoBehaviour {
 	Vector3 spawnPosition;
 
 	public GameObject armoireVide;
-	public GameObject startButton;
+	public GameObject startButton, restartButton;
 	GameObject lightGlobal;
 
 	// Use this for initialization
@@ -93,14 +93,6 @@ public class Manager : MonoBehaviour {
 			Rain ();
 		}
 
-		if (SimuleLevelPrime.clicked) {
-			for (int u = 0; u < Ingurgiteur.nbDominos; u++) {
-				if (u % 2 == 0)
-					Thunder ();
-				else
-					Rain ();
-			}
-		}
 	}
 
 	public static void TranslateCannon(){
@@ -144,6 +136,7 @@ public class Manager : MonoBehaviour {
 	void DestroySpawner(){
 		Destroy (GameObject.Find ("Spawner"));
 		Instantiate (startButton, new Vector3 (49.671f, 0.363f, 9.46f), Quaternion.identity);
+		Instantiate (restartButton, new Vector3 (50.605f, 0.363f, 9.46f), Quaternion.identity);
 	}
 
 	void ActivateStars(){

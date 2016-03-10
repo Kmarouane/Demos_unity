@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Level2\InitLevel2.cs" />
      <Compile Include="Assets\Scripts\Level2\SimulLevel2.cs" />
      <Compile Include="Assets\Scripts\Level2Transition.cs" />
+     <Compile Include="Assets\Scripts\Level3\ArmTrig.cs" />
      <Compile Include="Assets\Scripts\Level3\DestroyTheBall.cs" />
      <Compile Include="Assets\Scripts\Level3\DynamicScale.cs" />
      <Compile Include="Assets\Scripts\Level3\FireBall.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Scripts\Level3\IngurgiteurCondition.cs" />
      <Compile Include="Assets\Scripts\Level3\Manager.cs" />
      <Compile Include="Assets\Scripts\Level3\RaycastExample.cs" />
+     <Compile Include="Assets\Scripts\Level3\Restart.cs" />
      <Compile Include="Assets\Scripts\Level3\SimuleLevelPrime.cs" />
      <Compile Include="Assets\Scripts\Level3\Trigger.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />

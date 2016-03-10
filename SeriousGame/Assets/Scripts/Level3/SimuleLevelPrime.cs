@@ -5,10 +5,13 @@ public class SimuleLevelPrime : MonoBehaviour {
 
 	public static bool clicked ;
 	ParticleSystem thunderP, thunderP2, rainP, cannonP;
-	GameObject lumiere;
+	GameObject lumiere, ballEmitter;
 	public float speed = 15.0f;
 	public GameObject ball;
 	public Transform ballSource;
+	Color[] couleurs = { Color.yellow, Color.blue };
+	bool cFinit = false;
+	public static int canSimulate = 0;
 
 	void Start() {
 		thunderP = GameObject.Find ("ThunderParticleSystem").GetComponent<ParticleSystem> ();
@@ -16,35 +19,52 @@ public class SimuleLevelPrime : MonoBehaviour {
 		rainP = GameObject.Find ("DropParticleSystem").GetComponent<ParticleSystem> ();
 		cannonP = GameObject.Find ("FireBallParticleSystem").GetComponent<ParticleSystem> ();
 		lumiere = GameObject.Find ("Directional Light");
+		ballEmitter = GameObject.Find ("LevelPrimeBallEmitter");
 	}
 
+	void Update(){
+		if (canSimulate == 5 && !cFinit) {
+			GetComponent<Animator> ().enabled = true;
+		}
+	}
 	IEnumerator OnMouseDown() {
 
-		for (int i = 0; i < Ingurgiteur.nbDominos; i++) {
+		if (!cFinit && canSimulate == 5) {
+			GetComponent<Animator> ().enabled = false;
+			for (int i = 0; i < Ingurgiteur.nbDominos; i++) {
 
-			//lanceur.FireTheBall (cannonP);
-			FireTheBall ();
-			yield return new WaitForSeconds (1.0f);
+				FireTheBall ();
+				yield return new WaitForSeconds (1.0f);
 
 
-			if (i % 2 == 0)
-				Thunder ();
-			else
-				Rain ();
-			yield return new WaitForSeconds (0.5f);
+				if (i % 2 == 0) {
+					Thunder ();
+					yield return new WaitForSeconds (0.5f);
+				} else {
+					Rain ();	
+					yield return new WaitForSeconds (1.5f);
+				}				
 
-			Manager.dominosTableau [i].GetComponent<Rigidbody> ().isKinematic = false;
+				Manager.dominosTableau [i].GetComponent<Rigidbody> ().isKinematic = false;
+				Manager.dominosTableau [i].GetComponent<Renderer> ().material.color = couleurs [i % 2];
 
-			if (i == 0)
-				Manager.dominosTableau [i].GetComponent<Rigidbody> ().AddForce (-10, 0, 0);
-			//manage.TranslateNuage ();
+				if (i == 0)
+					Manager.dominosTableau [i].GetComponent<Rigidbody> ().AddForce (-10, 0, 0);
 
-			yield return new WaitForSeconds (1.0f);
-			Manager.TranslateNuage ();
-			thunderP.transform.Translate (Vector3.left);
-			rainP.transform.Translate (Vector3.left);
+				if (i < Ingurgiteur.nbDominos - 1) {
+					Manager.TranslateCannon ();
+					ballEmitter.transform.Translate (Vector3.left);
+					cannonP.transform.Translate (Vector3.left);
+
+					Manager.TranslateNuage ();
+					thunderP.transform.Translate (Vector3.left);
+					rainP.transform.Translate (Vector3.left);
+				}
+
+				yield return new WaitForSeconds (1.0f);
+			}
+			cFinit = true;
 		}
-
 	}
 
 	void Thunder() {
@@ -70,8 +90,8 @@ public class SimuleLevelPrime : MonoBehaviour {
 	public void FireTheBall(){
 		cannonP.Play ();
 		cannonP.startLifetime = cannonP.startLifetime;
-		GameObject bouleDeFeu = Instantiate (ball, ballSource.position + new Vector3 (0f, 1.5f, 1.045f), Quaternion.identity) as GameObject;
-		bouleDeFeu.GetComponent<Rigidbody> ().velocity = transform.TransformDirection (new Vector3 (0, 0, speed));
+		GameObject bouleDeFeu = Instantiate (ball, ballEmitter.transform.position, Quaternion.identity) as GameObject;
+		bouleDeFeu.GetComponent<Rigidbody> ().velocity = transform.TransformDirection (new Vector3 (0, 0, speed*2));
 	}
 
 }

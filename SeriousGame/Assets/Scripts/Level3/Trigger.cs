@@ -2,11 +2,12 @@
 using System.Collections;
 
 public class Trigger : MonoBehaviour {
-
+	/*
 	public GameObject[] barette;
 	int index, currentBarette;
 	int[] checks = { 0, 0, 0, 0, 0 };
 	Vector3 pos;
+	int verif = 0;
 
 	void OnTriggerEnter(Collider col){
 		if (col.name.Contains ("LevelPrimeJeton")) {			
@@ -26,7 +27,8 @@ public class Trigger : MonoBehaviour {
 		}
 	}
 
+
 	void SpawnSolution(){
 		Instantiate (barette [index], pos, Quaternion.identity);
-	}
+	}*/
 }
