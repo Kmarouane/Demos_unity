@@ -4,6 +4,7 @@ using System.Collections;
 public class Restart : MonoBehaviour {
 
 	public GameObject[] barettes;
+	public static int rewind = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -12,16 +13,15 @@ public class Restart : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
 	void OnMouseDown() {
-		Destroy (gameObject);
-		/*
-		for (int u = 0; u < barettes.Length; u++) {
-			DestroyImmediate (barettes [u], true);
-			//Destroy (barettes [u].gameObject);
-			ArmTrig.done = false;
-		}*/
+		rewind = 1;
+		Invoke ("ResetRewind", (float)(1f / 100f));
+	}
+
+	void ResetRewind(){
+		rewind = 0;
 	}
 }

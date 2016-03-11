@@ -5,7 +5,7 @@ public class SimuleLevelPrime : MonoBehaviour {
 
 	public static bool clicked ;
 	ParticleSystem thunderP, thunderP2, rainP, cannonP;
-	GameObject lumiere, ballEmitter;
+	GameObject lumiere, ballEmitter, messageDeFin;
 	public float speed = 15.0f;
 	public GameObject ball;
 	public Transform ballSource;
@@ -20,6 +20,8 @@ public class SimuleLevelPrime : MonoBehaviour {
 		cannonP = GameObject.Find ("FireBallParticleSystem").GetComponent<ParticleSystem> ();
 		lumiere = GameObject.Find ("Directional Light");
 		ballEmitter = GameObject.Find ("LevelPrimeBallEmitter");
+		messageDeFin = GameObject.Find ("AchivementImage");
+		//ac.SetActive (false);
 	}
 
 	void Update(){
@@ -63,6 +65,9 @@ public class SimuleLevelPrime : MonoBehaviour {
 
 				yield return new WaitForSeconds (1.0f);
 			}
+			yield return new WaitForSeconds (1.0f);
+			Invoke ("FinNiveau", 0f);
+			Invoke ("FinNiveau", 3f);
 			cFinit = true;
 		}
 	}
@@ -92,6 +97,13 @@ public class SimuleLevelPrime : MonoBehaviour {
 		cannonP.startLifetime = cannonP.startLifetime;
 		GameObject bouleDeFeu = Instantiate (ball, ballEmitter.transform.position, Quaternion.identity) as GameObject;
 		bouleDeFeu.GetComponent<Rigidbody> ().velocity = transform.TransformDirection (new Vector3 (0, 0, speed*2));
+	}
+
+	void FinNiveau(){
+		if(!messageDeFin.activeSelf)
+			messageDeFin.SetActive (true);
+		else
+			messageDeFin.SetActive (false);
 	}
 
 }
