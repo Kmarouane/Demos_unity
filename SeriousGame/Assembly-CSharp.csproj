@@ -80,6 +80,8 @@
      <Compile Include="Assets\Scripts\Level3\SimuleLevelPrime.cs" />
      <Compile Include="Assets\Scripts\Level3\Trigger.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\LevelWolf\LevelWolfSimulation.cs" />
+     <Compile Include="Assets\Scripts\LevelWolf\test.cs" />
      <Compile Include="Assets\Scripts\PorterJeton.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: c067e7a8713fafa4f86cd1601df54628
+timeCreated: 1458223857
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm1_L
+    100002: Arm1_R
+    100004: Arm2_L
+    100006: Arm2_R
+    100008: Arm3_L
+    100010: Arm3_R
+    100012: Arm4_L
+    100014: Arm4_R
+    100016: Arm_IK_L
+    100018: Arm_IK_R
+    100020: Armature
+    100022: Back
+    100024: Back_001
+    100026: Back_002
+    100028: Back_003
+    100030: Bully
+    100032: Cube
+    100034: ear1_L
+    100036: ear1_R
+    100038: ear2_L
+    100040: ear2_R
+    100042: Foot1_L
+    100044: Foot1_R
+    100046: Foot2_L
+    100048: Foot2_R
+    100050: Foot3_L
+    100052: Foot3_R
+    100054: Foot4_L
+    100056: Foot4_R
+    100058: Foot_IK_L
+    100060: Foot_IK_R
+    100062: Head
+    100064: Neck
+    100066: Torso
+    100068: //RootNode
+    100070: Cube_001
+    100072: Vase
+    400000: Arm1_L
+    400002: Arm1_R
+    400004: Arm2_L
+    400006: Arm2_R
+    400008: Arm3_L
+    400010: Arm3_R
+    400012: Arm4_L
+    400014: Arm4_R
+    400016: Arm_IK_L
+    400018: Arm_IK_R
+    400020: Armature
+    400022: Back
+    400024: Back_001
+    400026: Back_002
+    400028: Back_003
+    400030: Bully
+    400032: Cube
+    400034: ear1_L
+    400036: ear1_R
+    400038: ear2_L
+    400040: ear2_R
+    400042: Foot1_L
+    400044: Foot1_R
+    400046: Foot2_L
+    400048: Foot2_R
+    400050: Foot3_L
+    400052: Foot3_R
+    400054: Foot4_L
+    400056: Foot4_R
+    400058: Foot_IK_L
+    400060: Foot_IK_R
+    400062: Head
+    400064: Neck
+    400066: Torso
+    400068: //RootNode
+    400070: Cube_001
+    400072: Vase
+    2300000: Cube_001
+    2300002: Vase
+    3300000: Cube_001
+    3300002: Vase
+    4300000: Cube
+    4300002: Cube_001
+    4300004: Vase
+    7400000: wolf_idle
+    7400002: wolf_run
+    9500000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: wolf_idle
+      takeName: Default Take
+      firstFrame: 40
+      lastFrame: 218
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_IK_L
+        weight: 1
+      - path: Armature/Arm_IK_R
+        weight: 1
+      - path: Armature/Back
+        weight: 1
+      - path: Armature/Back/Back_001
+        weight: 1
+      - path: Armature/Back/Back_001/Back_002
+        weight: 1
+      - path: Armature/Back/Back_001/Back_002/Back_003
+        weight: 1
+      - path: Armature/Back/Bully
+        weight: 1
+      - path: Armature/Back/Bully/Torso
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L/Arm3_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L/Arm3_L/Arm2_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L/Arm3_L/Arm2_L/Arm1_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R/Arm3_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R/Arm3_R/Arm2_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R/Arm3_R/Arm2_R/Arm1_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_L/ear2_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_R/ear2_R
+        weight: 1
+      - path: Armature/Back/Foot4_L
+        weight: 1
+      - path: Armature/Back/Foot4_L/Foot3_L
+        weight: 1
+      - path: Armature/Back/Foot4_L/Foot3_L/Foot2_L
+        weight: 1
+      - path: Armature/Back/Foot4_L/Foot3_L/Foot2_L/Foot1_L
+        weight: 1
+      - path: Armature/Back/Foot4_R
+        weight: 1
+      - path: Armature/Back/Foot4_R/Foot3_R
+        weight: 1
+      - path: Armature/Back/Foot4_R/Foot3_R/Foot2_R
+        weight: 1
+      - path: Armature/Back/Foot4_R/Foot3_R/Foot2_R/Foot1_R
+        weight: 1
+      - path: Armature/Foot_IK_L
+        weight: 1
+      - path: Armature/Foot_IK_R
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: wolf_run
+      takeName: ArmatureAction
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_IK_L
+        weight: 1
+      - path: Armature/Arm_IK_R
+        weight: 1
+      - path: Armature/Back
+        weight: 1
+      - path: Armature/Back/Back_001
+        weight: 1
+      - path: Armature/Back/Back_001/Back_002
+        weight: 1
+      - path: Armature/Back/Back_001/Back_002/Back_003
+        weight: 1
+      - path: Armature/Back/Bully
+        weight: 1
+      - path: Armature/Back/Bully/Torso
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L/Arm3_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L/Arm3_L/Arm2_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_L/Arm3_L/Arm2_L/Arm1_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R/Arm3_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R/Arm3_R/Arm2_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Arm4_R/Arm3_R/Arm2_R/Arm1_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_L/ear2_L
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_R
+        weight: 1
+      - path: Armature/Back/Bully/Torso/Neck/Head/ear1_R/ear2_R
+        weight: 1
+      - path: Armature/Back/Foot4_L
+        weight: 1
+      - path: Armature/Back/Foot4_L/Foot3_L
+        weight: 1
+      - path: Armature/Back/Foot4_L/Foot3_L/Foot2_L
+        weight: 1
+      - path: Armature/Back/Foot4_L/Foot3_L/Foot2_L/Foot1_L
+        weight: 1
+      - path: Armature/Back/Foot4_R
+        weight: 1
+      - path: Armature/Back/Foot4_R/Foot3_R
+        weight: 1
+      - path: Armature/Back/Foot4_R/Foot3_R/Foot2_R
+        weight: 1
+      - path: Armature/Back/Foot4_R/Foot3_R/Foot2_R/Foot1_R
+        weight: 1
+      - path: Armature/Foot_IK_L
+        weight: 1
+      - path: Armature/Foot_IK_R
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
