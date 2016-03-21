@@ -14,6 +14,11 @@ ModelImporter:
     100012: Cube_003
     100014: Ball
     100016: Sphere
+    100018: mur_geant
+    100020: pattern
+    100022: plateforme_mobile
+    100024: mur_geant_2
+    100026: mur2
     400000: Circle
     400002: Cylinder
     400004: //RootNode
@@ -23,6 +28,11 @@ ModelImporter:
     400012: Cube_003
     400014: Ball
     400016: Sphere
+    400018: mur_geant
+    400020: pattern
+    400022: plateforme_mobile
+    400024: mur_geant_2
+    400026: mur2
     2300000: Circle
     2300002: Cylinder
     2300004: Cube
@@ -31,6 +41,11 @@ ModelImporter:
     2300010: Cube_003
     2300012: Ball
     2300014: Sphere
+    2300016: mur_geant
+    2300018: pattern
+    2300020: plateforme_mobile
+    2300022: mur_geant_2
+    2300024: mur2
     3300000: Circle
     3300002: Cylinder
     3300004: Cube
@@ -39,6 +54,11 @@ ModelImporter:
     3300010: Cube_003
     3300012: Ball
     3300014: Sphere
+    3300016: mur_geant
+    3300018: pattern
+    3300020: plateforme_mobile
+    3300022: mur_geant_2
+    3300024: mur2
     4300000: Circle
     4300002: Cylinder
     4300004: Cube_001
@@ -47,6 +67,11 @@ ModelImporter:
     4300010: Cube_003
     4300012: Ball
     4300014: Sphere
+    4300016: mur_geant
+    4300018: pattern
+    4300020: plateforme_mobile
+    4300022: mur_geant_2
+    4300024: mur2
     7400000: Default Take
     9500000: //RootNode
   materials:

@@ -32,16 +32,18 @@ public class ChangeColor : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {		
-		dominoCourant = GameObject.Find ("Domino" + (Iterations._iteration - 1));
-		if (dominoCourant.name == "Domino0" && currentColor == colors [0]) {//Color.red) {
-			dominoCourant.gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, -10);
-			dominos [0].GetComponent<Rigidbody> ().isKinematic = false;
-			verification [0] = 1;
-		}
-		for (int i = 1; i <= 5; i++) {
-			if (dominoCourant == dominos [i] && currentColor == colors [i%3] && verification[i-1] == 1) {
-				dominos[i].GetComponent<Rigidbody> ().isKinematic = false;
-				verification [i] = 1;
+		if (LevelManager._level == 1) {
+			dominoCourant = GameObject.Find ("Domino" + (Iterations._iteration - 1));
+			if (dominoCourant.name == "Domino0" && currentColor == colors [0]) {//Color.red) {
+				dominoCourant.gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, -10);
+				dominos [0].GetComponent<Rigidbody> ().isKinematic = false;
+				verification [0] = 1;
+			}
+			for (int i = 1; i <= 5; i++) {
+				if (dominoCourant == dominos [i] && currentColor == colors [i%3] && verification[i-1] == 1) {
+					dominos[i].GetComponent<Rigidbody> ().isKinematic = false;
+					verification [i] = 1;
+				}
 			}
 		}
 	}

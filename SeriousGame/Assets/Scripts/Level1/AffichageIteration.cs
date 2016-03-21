@@ -14,6 +14,9 @@ public class AffichageIteration : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Itération : " + Iterations._iteration;
+		if (LevelManager._level != 2)
+			text.text = "Itération : " + Iterations._iteration;
+		else
+			text.text = "";
 	}
 }

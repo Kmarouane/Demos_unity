@@ -31,7 +31,7 @@ public class PorterJeton : MonoBehaviour {
 	}
 
 	void Ramasser(){		
-		if (Input.GetKeyDown (KeyCode.Space) || Input.GetMouseButtonDown(0)) {
+		if (Input.GetKeyDown (KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.GetButton("BoutonXManette")) {
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
 
@@ -50,7 +50,7 @@ public class PorterJeton : MonoBehaviour {
 	}
 
 	void TestRelachement (){
-		if (Input.GetKeyDown (KeyCode.Space)  || Input.GetMouseButtonDown(0)) {
+		if (Input.GetKeyDown (KeyCode.Space)  || Input.GetMouseButtonDown(0) || Input.GetButton("BoutonXManette")) {
 			Relacher ();
 		}
 	}

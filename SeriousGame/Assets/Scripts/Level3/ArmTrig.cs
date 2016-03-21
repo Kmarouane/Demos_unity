@@ -20,7 +20,7 @@ public class ArmTrig : MonoBehaviour {
 		if (col.name.Contains ("LevelPrimeJeton")) {
 			if (!done) {
 				index = int.Parse (col.name.Substring (15, 1));
-				pos = new Vector3 (50.1f, transform.position.y, 9.8f);
+				pos = new Vector3 (52.99f, transform.position.y, 6.3f);
 				Invoke	("SpawnBarette", 1f);
 				if (col.name == goodCube.name)
 					SimuleLevelPrime.canSimulate++;
