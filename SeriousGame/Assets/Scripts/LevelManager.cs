@@ -20,12 +20,14 @@ public class LevelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		text.text = "Level : " + _level;
-		if (joueur.transform.position.x >= 10 && joueur.transform.position.x < 31)
+		if (joueur.transform.position.x >= 10 && joueur.transform.position.x < 31 && joueur.transform.position.z > -47)
 			_level = 2;
-		else if (joueur.transform.position.x >= 31 && joueur.transform.position.x < 63)
+		else if (joueur.transform.position.x >= 31 && joueur.transform.position.x < 63 && joueur.transform.position.z > -47)
 			_level = 3;
-		else if (joueur.transform.position.x >= 63)
+		else if (joueur.transform.position.x >= 63 && joueur.transform.position.z > -47)
 			_level = 4;
+		else if (joueur.transform.position.z < -47)
+			_level = 5;
 
 		if (levelCompleted) {
 			Invoke ("FinNiveau", 0f);

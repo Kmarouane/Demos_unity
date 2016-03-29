@@ -13,11 +13,16 @@ public class Restart : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (SimuleLevelPrime.canSimulate < 5 && ArmTrig.jetonsPoses == 5)
+			GetComponent<Animator> ().SetBool ("mustRewind", true);
+		else
+			GetComponent<Animator> ().SetBool ("mustRewind", false);
 	}
 
 	void OnMouseDown() {
 		rewind = 1;
+		ArmTrig.jetonsPoses = 0;
+		GetComponent<Animator> ().SetBool ("mustRewind", false);
 		Invoke ("ResetRewind", (float)(1f / 100f));
 	}
 

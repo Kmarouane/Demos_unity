@@ -12,7 +12,7 @@ public class TailleT1 : MonoBehaviour {
 			Debug.Log (taille);
 			if (taille == TailleTableau.tailleDuTableau) {
 				valide = true;
-				Instantiate (col.gameObject, new Vector3(16.7f,2.5f,-8.5f), Quaternion.identity);
+				Instantiate (col.gameObject, new Vector3(69.23f, 2.5f, -8.255f), Quaternion.identity);
 				Destroy (col.gameObject.GetComponent<APorter> ());
 				Destroy (col.gameObject.GetComponent<Rigidbody> ());
 				Destroy (gameObject);

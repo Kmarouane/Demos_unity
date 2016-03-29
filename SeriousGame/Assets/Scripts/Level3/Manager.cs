@@ -23,6 +23,8 @@ public class Manager : MonoBehaviour {
 	public GameObject startButton, restartButton;
 	GameObject lightGlobal;
 
+	public static int[] distances = { 0, 0, 0, 0, 0 };
+
 	// Use this for initialization
 	void Start () {
 		dominosTableau = new GameObject[taille];

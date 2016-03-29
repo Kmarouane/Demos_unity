@@ -10,7 +10,7 @@ public class TailleMoinsUnT1 : MonoBehaviour {
 			int tmp = int.Parse (col.name.Substring (6,1));
 			if (TailleTableau.tailleDuTableau - tmp == 1) {
 				valide = true;
-				Instantiate (col.gameObject, new Vector3 (17.18f, 2.5f, -8.2f), Quaternion.identity);
+				Instantiate (col.gameObject, new Vector3 (69.23f, 2.5f, -8.255f), Quaternion.identity);
 				Destroy(col.gameObject.GetComponent<APorter>());
 				Destroy (col.gameObject.GetComponent<Rigidbody> ());
 				Destroy (gameObject);

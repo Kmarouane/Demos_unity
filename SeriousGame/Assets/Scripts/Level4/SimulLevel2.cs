@@ -11,8 +11,6 @@ public class SimulLevel2 : MonoBehaviour {
 	public Camera mainC;
 	public Camera simulationC;
 
-	public GameObject messageDeFin;
-
 	IEnumerator OnMouseDown(){
 		if (can_click) {
 			can_click = false;
@@ -26,6 +24,7 @@ public class SimulLevel2 : MonoBehaviour {
 					InitLevel2.dominos [i].transform.Rotate (Vector3.up * 90f);
 					//scriptInit.dominos [i].transform.Rotate (Vector3.up * 90f);
 			}
+			FaceTheCamera.followCamera = false;
 			mainC.GetComponent<Camera> ().enabled = false;
 			simulationC.GetComponent<Camera>().enabled = true;
 
@@ -36,22 +35,15 @@ public class SimulLevel2 : MonoBehaviour {
 					InitLevel2.dominos [i].GetComponent<Rigidbody> ().AddForce (0, 0, -10);
 					//scriptInit.dominos [i].GetComponent<Rigidbody> ().AddForce (0, 0, -10);
 				yield return new WaitForSeconds (2.0f);
+				Iterations._iteration++;
 					
 			}
 			//Permutation des cameras
 			mainC.GetComponent<Camera> ().enabled = true;
 			simulationC.GetComponent<Camera>().enabled = false;
-			//Affichage du message de fin du niveau
-			Invoke ("FinNiveau", 0f);
-			Invoke ("FinNiveau", 3f);
+			FaceTheCamera.followCamera = true;
+			LevelManager.levelCompleted = true;
 		}
-	}
-
-	void FinNiveau(){
-		if(!messageDeFin.activeSelf)
-			messageDeFin.SetActive (true);
-		else
-			messageDeFin.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -63,18 +55,13 @@ public class SimulLevel2 : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.G)) {
 			Screen.SetResolution(1366,598,true);
+			FaceTheCamera.followCamera = false;
 			mainC.GetComponent<Camera> ().enabled = false;
 			simulationC.GetComponent<Camera>().enabled = true;
 		}else if (Input.GetKeyDown (KeyCode.H)) {
 			mainC.GetComponent<Camera> ().enabled = true;
 			simulationC.GetComponent<Camera>().enabled = false;
-		}
-
-		if (Input.GetKeyDown (KeyCode.P)) {
-			if (!messageDeFin.activeSelf)
-				messageDeFin.SetActive (true);
-			else
-				messageDeFin.SetActive (false);
+			FaceTheCamera.followCamera = true;
 		}
 	}
 }

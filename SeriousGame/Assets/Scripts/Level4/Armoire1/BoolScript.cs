@@ -8,6 +8,9 @@ public class BoolScript : MonoBehaviour {
 	int taille;
 
 	// Use this for initialization
+	void Start(){
+		
+	}
 
 	void OnTriggerEnter(Collider col){
 		if (col.name.Contains ("True"))
@@ -18,7 +21,7 @@ public class BoolScript : MonoBehaviour {
 			valide = true;
 			string tmp = col.name.ToLower ().Substring (5, taille);
 			value = bool.Parse (tmp);
-			Instantiate (col.gameObject, new Vector3 (24.88f, 2.133f, -6.8f), Quaternion.identity);
+			Instantiate (col.gameObject, new Vector3 (83.05f, 2.7f, -7.13f), Quaternion.identity);
 			Destroy(col.gameObject.GetComponent<APorter>());
 			Destroy (col.gameObject.GetComponent<Rigidbody> ());
 			Destroy (gameObject);

@@ -14,11 +14,11 @@ public class APorter : MonoBehaviour {
 		if (transform.position.y < 0)
 			transform.position = new Vector3 (transform.position.x, 3.0f, transform.position.z);
 	}
-	/*
+
 	void OnCollisionStay(Collision hit){
-		if (hit.gameObject.name.Equals ("plateforme_mobile"))
+		if (hit.gameObject.name.Equals ("Assenceur"))
 			transform.parent = hit.transform;
 		else
 			transform.parent = null;
-	}*/
+	}
 }
