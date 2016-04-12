@@ -21,7 +21,7 @@ public class BoolScript : MonoBehaviour {
 			valide = true;
 			string tmp = col.name.ToLower ().Substring (5, taille);
 			value = bool.Parse (tmp);
-			Instantiate (col.gameObject, new Vector3 (83.05f, 2.7f, -7.13f), Quaternion.identity);
+			Instantiate (col.gameObject, new Vector3 (83.38f, 1.479f, -7.094f), Quaternion.identity);
 			Destroy(col.gameObject.GetComponent<APorter>());
 			Destroy (col.gameObject.GetComponent<Rigidbody> ());
 			Destroy (gameObject);

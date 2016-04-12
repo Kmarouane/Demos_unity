@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level5\EgyptManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level5\PyramidBuilder.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelManager.cs" Line="15" Column="51" />
-      <File FileName="Assets\Scripts\Level4\InitLevel2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level4\Assenceur.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level2\LevelWolfSimulation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\APorter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level5\EgyptManager.cs" Line="19" Column="31" />
+      <File FileName="Assets\Scripts\Menu\SelectMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Menu\LevelSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PorterJeton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level5\EgyptManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level5\DialogTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level5\PyramidBuilder.cs" Line="8" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

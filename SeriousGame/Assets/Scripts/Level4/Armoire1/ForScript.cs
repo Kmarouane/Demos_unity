@@ -8,7 +8,7 @@ public class ForScript : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if (col.name == "JetonFOR") {
 			valide = true;
-			Instantiate (col.gameObject, new Vector3 (78.41f, 2.2f, -6.27f), Quaternion.identity);
+			Instantiate (col.gameObject, new Vector3 (79.404f, 1.434f, -6.905f), Quaternion.identity);
 			Destroy(col.gameObject.GetComponent<APorter>());
 			Destroy (col.gameObject.GetComponent<Rigidbody> ());
 			Destroy (gameObject);

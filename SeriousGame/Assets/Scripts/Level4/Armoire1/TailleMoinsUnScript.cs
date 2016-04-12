@@ -12,7 +12,7 @@ public class TailleMoinsUnScript : MonoBehaviour {
 			if (TailleTableau.tailleDuTableau - tmp == 1) {
 				tailleMoinsUn = tmp;
 				valide = true;
-				Instantiate (col.gameObject, new Vector3 (69.23f, 2.5f, -8.255f), Quaternion.identity);
+				Instantiate (col.gameObject, new Vector3 (69.498f - (0.5f * (tailleMoinsUn - 1)), 3.14f, -11.659f), Quaternion.identity);
 				Destroy(col.gameObject.GetComponent<APorter>());
 				Destroy (col.gameObject.GetComponent<Rigidbody> ());
 				Destroy (gameObject);

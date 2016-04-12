@@ -9,7 +9,7 @@ public class PorterJeton : MonoBehaviour {
 	public float distance;
 
 	public Texture2D curseur;
-
+	int xpos;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,13 @@ public class PorterJeton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (LevelSelector.selector) {
+			xpos = 20 * (LevelSelector.goToLvl - 1);
+			if (LevelSelector.goToLvl == 4)
+				xpos = 76;
+			transform.position = new Vector3 (xpos, 2, -3);
+			LevelSelector.selector = false;
+		}
 		if (porteUnObjet) {
 			Porter (objetAPorter);
 			TestRelachement ();

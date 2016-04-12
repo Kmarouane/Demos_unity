@@ -57,11 +57,8 @@ public class LevelWolfSimulation : MonoBehaviour {
 			GameObject.Find ("porte_de_fer").transform.position = Vector3.Slerp (GameObject.Find ("porte_de_fer").transform.position, new Vector3 (30, 11, 0), 0.2f * Time.deltaTime);
 		
 		else if (LevelManager._level == 3) {
-			//GameObject.Find ("porte_de_fer").transform.position = Vector3.Slerp (GameObject.Find ("porte_de_fer").transform.position, new Vector3 (GameObject.Find ("porte_de_fer").transform.position.x, -5.75f, GameObject.Find ("porte_de_fer").transform.position.z), 2f * Time.deltaTime);
-			//GameObject.Find ("porte_de_fer").transform.position = new Vector3(GameObject.Find ("porte_de_fer").transform.position.x,4.25f,GameObject.Find ("porte_de_fer").transform.position.z);
 			GameObject.Find ("porte_de_fer").transform.position = Vector3.Slerp (GameObject.Find ("porte_de_fer").transform.position, new Vector3 (30, 4.25f, 0), 0.5f * Time.deltaTime);
 		}
-		Debug.Log (LevelManager._level + " , " + levelDone);
 	}
 
 	IEnumerator OnMouseDown() {
@@ -72,17 +69,9 @@ public class LevelWolfSimulation : MonoBehaviour {
 				yield return new WaitForSeconds (3.0f);
 				pupitre [i].GetComponent<Renderer> ().material.color = Color.red;
 			}
-
-			/*
-			while (GameObject.Find ("porte_de_fer").transform.position.y < 11 && LevelManager._level == 2) {
-				GameObject.Find ("porte_de_fer").transform.position = Vector3.MoveTowards (GameObject.Find ("porte_de_fer").transform.position, new Vector3 (30, 11, 0), 2.0f * Time.fixedDeltaTime);
-				yield return new WaitForSeconds (0.05f);
-			}*/
 			Invoke ("OpenTheDoor", 2.0f);
 			GameObject.Find ("wolf").GetComponent<Animator> ().SetBool ("isRunning", false);
-			//levelDone = true;
 			LevelManager.levelCompleted = true;
-			//Destroy (gameObject);
 		}
 	}
 

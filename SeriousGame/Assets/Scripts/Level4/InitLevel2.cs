@@ -79,6 +79,11 @@ public class InitLevel2 : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		/*if (LevelManager._level == 4)
+			GameObject.Find ("Directional Light").SetActive (false);
+		else
+			GameObject.Find ("Directional Light").SetActive (true);*/
+		
 		if (!can_click &&
 			TailleTableau.tailleDuTableau > 0 &&
 		    ForScript.valide && IScript.valide && ZeroScript.vide && TailleMoinsUnScript.valide &&

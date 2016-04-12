@@ -28,5 +28,4 @@ public class Ingurgiteur : MonoBehaviour {
 	void ResetIndex(){
 		index = 0;
 	}
-		
 }

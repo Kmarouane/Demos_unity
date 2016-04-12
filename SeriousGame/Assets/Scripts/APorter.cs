@@ -4,9 +4,10 @@ using System.Collections;
 public class APorter : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col){
-		if (col.gameObject.tag == "LPSolutions") {
+		if (col.gameObject.tag == "LPSolutions") 
 			Physics.IgnoreCollision (col.gameObject.GetComponent<Collider> (), GetComponent<Collider> ());
-		}
+		if (col.gameObject.name == "LevelPrimeArrow")
+			Physics.IgnoreCollision (col.gameObject.GetComponent<Collider> (), GetComponent<Collider> ());
 	}
 
 	void FixedUpdate(){

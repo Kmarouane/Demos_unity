@@ -3,13 +3,15 @@ using System.Collections;
 
 public class SimulLevel2 : MonoBehaviour {
 
-	bool can_click = false;
+	bool can_click = false, openTheDoors = false;
 	public Material black_color;
 	public static int verificateurs = 0;
 
 	//public InitLevel2 scriptInit;
 	public Camera mainC;
 	public Camera simulationC;
+
+	public GameObject pivotD, pivotG;
 
 	IEnumerator OnMouseDown(){
 		if (can_click) {
@@ -43,6 +45,7 @@ public class SimulLevel2 : MonoBehaviour {
 			simulationC.GetComponent<Camera>().enabled = false;
 			FaceTheCamera.followCamera = true;
 			LevelManager.levelCompleted = true;
+			openTheDoors = true;
 		}
 	}
 
@@ -52,6 +55,12 @@ public class SimulLevel2 : MonoBehaviour {
 		if (!can_click &&
 		    TailleT1.valide && TailleMoinsUnT1.valide && verificateurs == 14 && InitLevel2.niveauInitialise == 1)
 			can_click = true;
+
+		if (openTheDoors) {
+			pivotD.transform.rotation = Quaternion.Slerp(pivotD.transform.rotation, Quaternion.Euler(0, -110, 0), Time.deltaTime);
+			pivotG.transform.rotation = Quaternion.Slerp(pivotG.transform.rotation, Quaternion.Euler(0, 110, 0), Time.deltaTime);
+			openTheDoors = false;
+		}
 
 		if (Input.GetKeyDown (KeyCode.G)) {
 			Screen.SetResolution(1366,598,true);
