@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class EgyptManager : MonoBehaviour {
@@ -61,11 +62,17 @@ public class EgyptManager : MonoBehaviour {
 			}
 			Debug.Log (startDiscussion);
 			if (Input.GetKeyDown (KeyCode.Space)){
-				if (EgyptTrigger1.distance1 == 1 /*&& startDiscussion*/) {
+				if (EgyptTrigger1.distance1 == 6 &&
+				    EgyptTrigger2.distance2 == 6 &&
+				    EgyptTrigger3.distance3 == 6 &&
+				    EgyptTrigger4.distance4 == 4 &&
+				    EgyptTrigger7.distance7 == 2 &&
+				    EgyptTrigger8.distance8 == 2) {
 					GameObject.Find ("Pharaon").GetComponent<Animator> ().SetBool ("pyramidBuilt", true);
 					PyramidBuilder.build = true;
 					startDiscussion = false;
 					letHimClimb = true;
+					Invoke ("gotoMenu", 5f);
 				}
 			}
 			if(letHimClimb)
@@ -77,5 +84,9 @@ public class EgyptManager : MonoBehaviour {
 		stele.transform.position = Vector3.Slerp (stele.transform.position, new Vector3 (stele.transform.position.x, -4.5f, stele.transform.position.z), 0.2f * Time.deltaTime);
 		mur.transform.position = Vector3.Slerp (mur.transform.position, new Vector3 (mur.transform.position.x, -0.6f, mur.transform.position.z), 0.2f * Time.deltaTime);
 		mur.transform.localScale = Vector3.Slerp (mur.transform.localScale, new Vector3 (0.5f, 2.4f, 2.4279f), 0.2f * Time.deltaTime);
+	}
+
+	void gotoMenu () {
+		SceneManager.LoadScene (0);
 	}
 }
