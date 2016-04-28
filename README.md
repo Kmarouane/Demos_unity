@@ -42,7 +42,7 @@ En bas de chaque armoire se trouve un bouton "play" qui permet de lancer l'algor
 
 ###Niveau5
 * Parler au pharaon
-* Construire l'algorithme à l'aide des cubes situés derière la trape à gauche de la stèle.
+* Construire l'algorithme à l'aide des cubes situés à l'arrière de la trappe à gauche de la stèle.
 * Solution :
 	* Pour K Allant de 0 à TailleZ
 	* Pour I Allant de 0 à TailleX
