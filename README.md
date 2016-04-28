@@ -1,6 +1,13 @@
 #Projet Serious Game
 
+###Installation de l'Oculus Rift
+*	Télécharger et installer le Runtime disponible à l'adresse : https://developer.oculus.com/downloads/pc/0.8.0.0-beta/Oculus_Runtime_for_Windows/
+*	Un redémarrage de la machine est recommandé.
 
+###Utilisation de l'Oculus Rift
+>	Si sous Windows 10, effectuer les étapes ci-dessous en mode compatibilité Windows 7/8 et en tant qu'administrateur).
+*	Repérer le dossier d'installation et exécuter le serveur OVR (Oculus/Service/OVRServer_x64).
+*	Lancer l'utilitaire 
 
 ###Niveau 1	
 Le but est de faire tomber tous les dominos en affectant à chacun une couleur définie. 
