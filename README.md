@@ -1,10 +1,10 @@
 #Projet Serious Game
 
-###Installation de l'Oculus Rift
+##Installation de l'Oculus Rift
 *	Télécharger et installer le Runtime disponible à l'adresse : https://developer.oculus.com/downloads/pc/0.8.0.0-beta/Oculus_Runtime_for_Windows/
 *	Un redémarrage de la machine est recommandé.
 
-###Utilisation de l'Oculus Rift
+##Utilisation de l'Oculus Rift
 >	Si sous Windows 10, effectuer les étapes ci-dessous en mode compatibilité Windows 7/8 et en tant qu'administrateur).
 
 *	Repérer le dossier d'installation et exécuter le serveur OVR (Oculus/Service/OVRServer_x64).
@@ -14,7 +14,9 @@
 *	Si tout se passe bien, L'utilitaire affichera le message suivant:
 > Oculus Rift DK2 Attached, No Tracker Attached
 *	Lancer Unity et s'assurer que la VR est activée en allant dans : Edit/Project Settings/Player, la case Virtual Reality Supported devra être cochée.
-*	Lancer le jeu soit en appuyant sur la boutton PLAY (flèche en haut) soit en allant dans Edit/Play. 
+*	Lancer le jeu soit en appuyant sur le boutton PLAY (flèche en haut) soit en allant dans Edit/Play. 
+
+##Les niveaux du jeu
 
 ###Niveau 1	
 Le but est de faire tomber tous les dominos en affectant à chacun une couleur définie. 
