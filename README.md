@@ -5,7 +5,7 @@
 *	Un redémarrage de la machine est recommandé.
 
 ###Utilisation de l'Oculus Rift
->	Si sous Windows 10, effectuer les étapes ci-dessous en mode compatibilité Windows 7/8 et en tant qu'administrateur).
+>	Si sous Windows 10, effectuer les étapes ci-dessous en mode compatibilité Windows 7/8 et en tant qu'administrateur).<
 *	Repérer le dossier d'installation et exécuter le serveur OVR (Oculus/Service/OVRServer_x64).
 *	Lancer l'utilitaire 
 
