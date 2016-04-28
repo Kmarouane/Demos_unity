@@ -43,9 +43,10 @@ En bas de chaque armoire se trouve un bouton "play" qui permet de lancer l'algor
 ###Niveau5
 * Parler au pharaon
 * Construire l'algorithme à l'aide des cubes situés derière la trape à gauche de la stèle.
-** Pour K Allant de 0 à TailleZ
-*** Pour I Allant de 0 à TailleX
-**** Pour J Allant de 0 à TailleY
-***** Poser une pierre X-J Y+K Z+I
-*** Décrémenter x2 TailleX
-*** Décrémenter x2 TailleY
+* Solution :
+	* Pour K Allant de 0 à TailleZ
+	* Pour I Allant de 0 à TailleX
+	* Pour J Allant de 0 à TailleY
+	* Poser une pierre X-J Y+K Z+I
+	* Décrémenter x2 TailleX
+	* Décrémenter x2 TailleY
