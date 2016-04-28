@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
 		text = GetComponent<Text> ();
 		vr_text = GameObject.Find ("VR_TextLevel").gameObject.GetComponent<TextMesh> ();
-		finNiveau = GameObject.Find ("AchivementImage");
+		finNiveau = GameObject.Find ("NiveauTerminé");
 		finNiveau.SetActive (false);
 		joueur = GameObject.Find ("FPSController");
 	}
@@ -31,6 +31,8 @@ public class LevelManager : MonoBehaviour {
 			_level = 4;
 		else if (joueur.transform.position.z < -50)
 			_level = 5;
+		else
+			_level = 1;
 
 		if (levelCompleted) {
 			Invoke ("FinNiveau", 0f);

@@ -19,15 +19,7 @@ public class Iterations : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (LevelManager._level == 1) {
-			if (Input.GetKeyDown (KeyCode.C) && _iteration < 6) {
-				_iteration++;
-			}
-			if (Input.GetKeyDown (KeyCode.V) && _iteration > 1) {
-				_iteration--;
-			}
-		} else if (LevelManager._level == 2)
-			_iteration = 0;
+
 	}
 
 	void OnTriggerEnter(Collider col) {

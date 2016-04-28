@@ -14,7 +14,9 @@ public class SelectMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Vector3 temp = Input.mousePosition;
+		temp.z = 6.5f;
+		GameObject.Find ("curseur").transform.position = Camera.main.ScreenToWorldPoint (temp);
 	}
 
 	void OnMouseDown() {
@@ -23,7 +25,9 @@ public class SelectMenu : MonoBehaviour {
 			AssignValues (false, false, true);
 			break;
 		case 1:
-			//Application.LoadLevel ("scene1");
+			LevelSelector.selector = true;
+			LevelSelector.goToLvl = 1;
+			Iterations._iteration = 1;
 			SceneManager.LoadScene (1);
 			break;
 		case 2:
@@ -39,7 +43,7 @@ public class SelectMenu : MonoBehaviour {
 			LevelSelector.selector = true;
 			LevelSelector.goToLvl = index - 4;
 			Debug.Log (LevelSelector.goToLvl);
-			//Application.LoadLevel ("scene1");
+			Iterations._iteration = 1;
 			SceneManager.LoadScene (1);
 			break;
 		}

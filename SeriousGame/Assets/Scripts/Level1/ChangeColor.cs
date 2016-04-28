@@ -6,7 +6,7 @@ public class ChangeColor : MonoBehaviour {
 	GameObject dominoCourant;
 	GameObject[] dominos = new GameObject[6];
 	public static int[] verification = new int[6];
-	Color[] colors = { Color.red, Color.blue, Color.green };//, Color.red, Color.green, Color.blue };
+	Color[] colors = { Color.red, Color.blue, Color.green };
 	Color currentColor;
 
 	// Use this for initialization

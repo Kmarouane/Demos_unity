@@ -10,6 +10,7 @@ public class PorterJeton : MonoBehaviour {
 
 	public Texture2D curseur;
 	int xpos;
+	public static bool marche_ou_pas;
 
 	// Use this for initialization
 	void Start () {
@@ -18,11 +19,21 @@ public class PorterJeton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		GameObject.Find("PlayerBody").GetComponent<Animator> ().SetBool ("isWalking", marche_ou_pas);
+		if (Input.GetButton ("Horizontal") || Input.GetButton ("Vertical"))
+			marche_ou_pas = true;
+		else
+			marche_ou_pas = false;
+
 		if (LevelSelector.selector) {
 			xpos = 20 * (LevelSelector.goToLvl - 1);
 			if (LevelSelector.goToLvl == 4)
 				xpos = 76;
-			transform.position = new Vector3 (xpos, 2, -3);
+			if (LevelSelector.goToLvl == 5)
+				transform.position = new Vector3 (75.637f, -5.008f, -50.77f);
+			else
+				transform.position = new Vector3 (xpos, 2, -3);
 			LevelSelector.selector = false;
 		}
 		if (porteUnObjet) {
@@ -48,7 +59,7 @@ public class PorterJeton : MonoBehaviour {
 				
 				APorter p = hit.collider.GetComponent<APorter> ();
 				if (p != null) {
-					Cursor.SetCursor (curseur, Vector2.zero, CursorMode.Auto);//*****************************************
+					Cursor.SetCursor (curseur, Vector2.zero, CursorMode.Auto);
 					porteUnObjet = true;
 					objetAPorter = p.gameObject;
 				}

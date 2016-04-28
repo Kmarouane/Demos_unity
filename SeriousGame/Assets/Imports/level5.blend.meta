@@ -38,6 +38,9 @@ ModelImporter:
     100060: shoulder_L
     100062: shoulder_R
     100064: temple
+    100066: temple_platform
+    100068: stele
+    100070: accroche
     400000: //RootNode
     400002: arm1_L
     400004: arm1_R
@@ -71,14 +74,28 @@ ModelImporter:
     400060: shoulder_L
     400062: shoulder_R
     400064: temple
+    400066: temple_platform
+    400068: stele
+    400070: accroche
     2300000: //RootNode
     2300002: temple
+    2300004: temple_platform
+    2300006: stele
+    2300008: accroche
     3300000: //RootNode
     3300002: temple
+    3300004: temple_platform
+    3300006: stele
+    3300008: accroche
     4300000: temple
     4300002: phir3awn
+    4300004: temple_platform
+    4300006: stele
+    4300008: accroche
     7400000: pharaon_sleep
     7400002: ArmatureAction
+    7400004: pharaon_climb
+    7400006: pharaon_speak
     9500000: //RootNode
     13700000: phir3awn
   materials:
@@ -106,7 +123,7 @@ ModelImporter:
       name: pharaon_sleep
       takeName: Default Take
       firstFrame: 50
-      lastFrame: 249
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -286,6 +303,206 @@ ModelImporter:
       - path: phir3awn
         weight: 1
       - path: temple
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pharaon_climb
+      takeName: Default Take
+      firstFrame: 70
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: accroche
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/base1
+        weight: 1
+      - path: Armature/base1/base2
+        weight: 1
+      - path: Armature/base1/base2/base3
+        weight: 1
+      - path: Armature/base1/base2/base3/base4
+        weight: 1
+      - path: Armature/base1/base2/base3/base4/base5
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/finger_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/fingers_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/finger_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/fingers_R
+        weight: 1
+      - path: Armature/base1/leg1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L/foot2_L
+        weight: 1
+      - path: Armature/base1/leg1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R/foot2_R
+        weight: 1
+      - path: Armature/IK_foot_L
+        weight: 1
+      - path: Armature/IK_foot_R
+        weight: 1
+      - path: Armature/IK_hand_L
+        weight: 1
+      - path: Armature/IK_hand_R
+        weight: 1
+      - path: phir3awn
+        weight: 1
+      - path: stele
+        weight: 1
+      - path: temple
+        weight: 1
+      - path: temple_platform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pharaon_speak
+      takeName: Default Take
+      firstFrame: 90
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: accroche
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/base1
+        weight: 1
+      - path: Armature/base1/base2
+        weight: 1
+      - path: Armature/base1/base2/base3
+        weight: 1
+      - path: Armature/base1/base2/base3/base4
+        weight: 1
+      - path: Armature/base1/base2/base3/base4/base5
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/finger_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/fingers_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/finger_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/fingers_R
+        weight: 1
+      - path: Armature/base1/leg1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L/foot2_L
+        weight: 1
+      - path: Armature/base1/leg1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R/foot2_R
+        weight: 1
+      - path: Armature/IK_foot_L
+        weight: 1
+      - path: Armature/IK_foot_R
+        weight: 1
+      - path: Armature/IK_hand_L
+        weight: 1
+      - path: Armature/IK_hand_R
+        weight: 1
+      - path: phir3awn
+        weight: 1
+      - path: stele
+        weight: 1
+      - path: temple
+        weight: 1
+      - path: temple_platform
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

@@ -5,51 +5,77 @@ using System.Collections;
 public class EgyptManager : MonoBehaviour {
 
 	public static int etape = 0;
-	GameObject messages;
+	GameObject cadre, text, stele, mur, pharaon;
 	string[] scripts = {
 		"Approchez, visiteur !",
 		"Vous êtes maintenant prisonnier de ce temple, tout comme moi",
 		"cependant, vous pouvez en sortir..",
 		"Pour cela, vous devez construire un édifice assez haut",
 		"pour atteindre la sortie du toit.",
-		"À vous de jouer!!",
+		"Vous avez à votre disposition, cette stèle..",
+		"Construisez votre édifice en utilisant l'algorithme adéquat",
+		"et revenez me voir quand vous aurez terminé",
+		"bonne chance",
+		"Ha ha ha !!",
 		""
 	};
-	float[] largeurs = { 160, 420, 240, 360, 210, 150, 0};
-	bool startDiscussion;
+	float[] largeurs = { 0.9f, 2.05f, 1.17f, 1.8f, 1.1f, 1.52f, 1.96f, 1.6f, 0.68f, 0.68f, 0 };
+	bool startDiscussion, letHimClimb;
 	public float delais;
 
 	// Use this for initialization
 	void Start () {
-		messages = GameObject.Find ("Level5Messages");
-		messages.SetActive (false);
+		cadre = GameObject.Find ("lvl5DialogCadre");
+		text = GameObject.Find ("lvl5DialogText");
+		stele = GameObject.Find ("stele");
+		mur = GameObject.Find ("MurDePorte");
+		pharaon = GameObject.Find ("Pharaon");
+		cadre.SetActive (false);
+		text.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 		if (LevelManager._level == 5) {
-			//Debug.Log (etape + " , " + startDiscussion + " , " + currentTime);
-			//messages.SetActive (true);
 
-			if (etape == 0 && DialogTrigger.isNear) {
+			cadre.SetActive (true);
+			text.SetActive (true);
+
+			if(DialogTrigger.isNear)
 				startDiscussion = true;
-			}
 
-			messages.GetComponentInChildren<Text> ().text = scripts [etape];
-			messages.GetComponent<RectTransform> ().sizeDelta = new Vector2 (largeurs [etape], 41.57f);
+			text.GetComponent<TextMesh> ().text = scripts [etape];
+			cadre.transform.localScale = new Vector3 (largeurs [etape], 0.2f, 0.008f);
 
-			if (etape == 5) {
-				messages.SetActive (false);
+			if (etape == 10) {
+				cadre.SetActive (false);
+				text.SetActive (false);
 				startDiscussion = false;
 				ApparitionStele ();
 			}
 
-			if (Input.GetKeyDown (KeyCode.Space) && etape < scripts.Length - 1)
+			if (Input.GetKeyDown (KeyCode.Space) && etape < scripts.Length && startDiscussion) {
+				GameObject.Find("Pharaon").GetComponent<Animator> ().SetBool ("pharaonAwake", true);
 				etape++;
+			}
+			Debug.Log (startDiscussion);
+			if (Input.GetKeyDown (KeyCode.Space)){
+				if (EgyptTrigger1.distance1 == 1 /*&& startDiscussion*/) {
+					GameObject.Find ("Pharaon").GetComponent<Animator> ().SetBool ("pyramidBuilt", true);
+					PyramidBuilder.build = true;
+					startDiscussion = false;
+					letHimClimb = true;
+				}
+			}
+			if(letHimClimb)
+				pharaon.transform.position = Vector3.Slerp (pharaon.transform.position, new Vector3 (pharaon.transform.position.x, -2.2f, -24f), 0.2f * Time.deltaTime);
 		}
 	}
 
 	void ApparitionStele(){
+		stele.transform.position = Vector3.Slerp (stele.transform.position, new Vector3 (stele.transform.position.x, -4.5f, stele.transform.position.z), 0.2f * Time.deltaTime);
+		mur.transform.position = Vector3.Slerp (mur.transform.position, new Vector3 (mur.transform.position.x, -0.6f, mur.transform.position.z), 0.2f * Time.deltaTime);
+		mur.transform.localScale = Vector3.Slerp (mur.transform.localScale, new Vector3 (0.5f, 2.4f, 2.4279f), 0.2f * Time.deltaTime);
 	}
 }

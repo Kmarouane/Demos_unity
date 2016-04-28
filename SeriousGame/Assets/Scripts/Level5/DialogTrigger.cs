@@ -4,12 +4,9 @@ using System.Collections;
 public class DialogTrigger : MonoBehaviour {
 
 	public GameObject character;
-	public static bool isNear = false;
+	public static bool isNear;
 
 	// Use this for initialization
-	void Start () {
-	
-	}
 
 	void OnTriggerEnter (Collider col) {
 		if (col.name == character.name)
@@ -20,9 +17,5 @@ public class DialogTrigger : MonoBehaviour {
 	void ResetBool () {
 		isNear = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

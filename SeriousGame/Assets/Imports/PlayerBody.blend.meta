@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: 14d2bb29720021b4bb7e0927450fe9e5
+timeCreated: 1460701531
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: arm1_L
+    100004: arm1_R
+    100006: arm2_L
+    100008: arm2_R
+    100010: Armature
+    100012: base1
+    100014: base2
+    100016: base3
+    100018: base4
+    100020: base5
+    100022: Cube
+    100024: finger_L
+    100026: finger_R
+    100028: fingers_L
+    100030: fingers_R
+    100032: foot1_L
+    100034: foot1_R
+    100036: foot2_L
+    100038: foot2_R
+    100040: hand_L
+    100042: hand_R
+    100044: IK_foot_L
+    100046: IK_foot_R
+    100048: IK_hand_L
+    100050: IK_hand_R
+    100052: leg1_L
+    100054: leg1_R
+    100056: leg2_L
+    100058: leg2_R
+    100060: phir3awn
+    100062: shoulder_L
+    100064: shoulder_R
+    400000: //RootNode
+    400002: arm1_L
+    400004: arm1_R
+    400006: arm2_L
+    400008: arm2_R
+    400010: Armature
+    400012: base1
+    400014: base2
+    400016: base3
+    400018: base4
+    400020: base5
+    400022: Cube
+    400024: finger_L
+    400026: finger_R
+    400028: fingers_L
+    400030: fingers_R
+    400032: foot1_L
+    400034: foot1_R
+    400036: foot2_L
+    400038: foot2_R
+    400040: hand_L
+    400042: hand_R
+    400044: IK_foot_L
+    400046: IK_foot_R
+    400048: IK_hand_L
+    400050: IK_hand_R
+    400052: leg1_L
+    400054: leg1_R
+    400056: leg2_L
+    400058: leg2_R
+    400060: phir3awn
+    400062: shoulder_L
+    400064: shoulder_R
+    2300000: //RootNode
+    2300002: Cube
+    3300000: //RootNode
+    3300002: Cube
+    4300000: Cube
+    4300002: phir3awn
+    7400000: walk_cycle
+    7400002: idle_cycle
+    9500000: //RootNode
+    13700000: phir3awn
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk_cycle
+      takeName: Default Take
+      firstFrame: 50
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/base1
+        weight: 1
+      - path: Armature/base1/base2
+        weight: 1
+      - path: Armature/base1/base2/base3
+        weight: 1
+      - path: Armature/base1/base2/base3/base4
+        weight: 1
+      - path: Armature/base1/base2/base3/base4/base5
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/finger_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/fingers_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/finger_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/fingers_R
+        weight: 1
+      - path: Armature/base1/leg1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L/foot2_L
+        weight: 1
+      - path: Armature/base1/leg1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R/foot2_R
+        weight: 1
+      - path: Armature/IK_foot_L
+        weight: 1
+      - path: Armature/IK_foot_R
+        weight: 1
+      - path: Armature/IK_hand_L
+        weight: 1
+      - path: Armature/IK_hand_R
+        weight: 1
+      - path: phir3awn
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 49
+    - serializedVersion: 16
+      name: idle_cycle
+      takeName: ArmatureAction_001
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/base1
+        weight: 1
+      - path: Armature/base1/base2
+        weight: 1
+      - path: Armature/base1/base2/base3
+        weight: 1
+      - path: Armature/base1/base2/base3/base4
+        weight: 1
+      - path: Armature/base1/base2/base3/base4/base5
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/finger_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_L/arm1_L/arm2_L/hand_L/fingers_L
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/finger_R
+        weight: 1
+      - path: Armature/base1/base2/shoulder_R/arm1_R/arm2_R/hand_R/fingers_R
+        weight: 1
+      - path: Armature/base1/leg1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L
+        weight: 1
+      - path: Armature/base1/leg1_L/leg2_L/foot1_L/foot2_L
+        weight: 1
+      - path: Armature/base1/leg1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R
+        weight: 1
+      - path: Armature/base1/leg1_R/leg2_R/foot1_R/foot2_R
+        weight: 1
+      - path: Armature/IK_foot_L
+        weight: 1
+      - path: Armature/IK_foot_R
+        weight: 1
+      - path: Armature/IK_hand_L
+        weight: 1
+      - path: Armature/IK_hand_R
+        weight: 1
+      - path: phir3awn
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

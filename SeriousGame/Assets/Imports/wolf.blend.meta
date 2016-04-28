@@ -43,6 +43,7 @@ ModelImporter:
     100070: Cube_001
     100072: Vase
     100074: Porte_Jetons
+    100076: RayModel
     400000: Arm1_L
     400002: Arm1_R
     400004: Arm2_L
@@ -81,16 +82,20 @@ ModelImporter:
     400070: Cube_001
     400072: Vase
     400074: Porte_Jetons
+    400076: RayModel
     2300000: Cube_001
     2300002: Vase
     2300004: Porte_Jetons
+    2300006: RayModel
     3300000: Cube_001
     3300002: Vase
     3300004: Porte_Jetons
+    3300006: RayModel
     4300000: Cube
     4300002: Cube_001
     4300004: Vase
     4300006: Porte_Jetons
+    4300008: RayModel
     7400000: wolf_idle
     7400002: wolf_run
     9500000: //RootNode

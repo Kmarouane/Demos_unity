@@ -26,7 +26,7 @@ public class BridgeBuilder : MonoBehaviour {
 
 		if (build)
 			for (int i = 0; i < marches.Length; i++)
-				marches [i].transform.position = Vector3.Slerp (marches [i].transform.position, destinations [i], Time.deltaTime * marches.Length / i);
+				marches [i].transform.position = Vector3.Slerp (marches [i].transform.position, destinations [i], Time.deltaTime * marches.Length / (i + 1));
 
 		if (LevelManager._level == 5) {
 			build = false;
