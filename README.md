@@ -12,7 +12,7 @@
 *	Brancher le câble USB de l'Oculus sur un port USB de la machine (fait office d'alimentation).
 *	Brancher le câble HDMI de l'Oculus sur le port HDMI de la machine.
 *	Si tout se passe bien, L'utilitaire affichera le message suivant:
-	*	> Oculus Rift DK2 Attached, No Tracker Attached
+> Oculus Rift DK2 Attached, No Tracker Attached
 *	Lancer Unity et s'assurer que la VR est activée en allant dans : Edit/Project Settings/Player, la case Virtual Reality Supported devra être cochée.
 *	Lancer le jeu soit en appuyant sur la boutton PLAY (flèche en haut) soit en allant dans Edit/Play. 
 
